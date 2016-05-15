@@ -1,0 +1,123 @@
+/************************************************************
+*															*
+* CSS & JS ToolTips v1.0.0									*
+*															*
+* Copyright 2016, PedroHenriques 							*
+* http://www.pedrojhenriques.com 							*
+* https://github.com/PedroHenriques 						*
+*															*
+* Free to use under the MIT license.			 			*
+* http://www.opensource.org/licenses/mit-license.php 		*
+*															*
+************************************************************/
+
+.tooltip {
+	display: inline-block;
+}
+
+.tooltip_text {
+	width: 0px;
+	height: 0px;
+
+	opacity: 0;
+	visibility: hidden;
+
+	position: fixed;
+	left: -1000px;
+	top: -1000px;
+
+	z-index: 99;
+
+	padding: 0.5rem 0.5rem;
+
+	font-size: 1rem;
+	font-weight: normal;
+	color: black;
+
+	overflow: hidden;
+
+	text-decoration: none;
+	text-shadow: none;
+	text-align: left;
+	white-space: pre-line;
+
+	background: #9FDAEE;
+
+	border: 0.05rem solid #2BB0D7;
+	border-radius: 0.25rem 0.25rem;
+	-moz-border-radius: 0.25rem 0.25rem;
+	-webkit-border-radius: 0.25rem 0.25rem;
+
+	box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.tooltip_arrow {
+	position: fixed;
+	left: -1000px;
+	top: -1000px;
+
+	z-index: 99;
+
+	height: 0px;
+	width: 0px;
+
+	opacity: 0;
+	visibility: hidden;
+
+	border-top-color: rgb(50, 50, 255);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+	border-style: solid;
+	border-width: 0.5rem;
+}
+
+.tooltip:hover .tooltip_text,
+.tooltip:hover .tooltip_arrow {
+	width: auto;
+	height: auto;
+
+	left: auto;
+
+	opacity: 1;
+	visibility: visible;
+
+	transition-property: visibility;
+	-o-transition-property: visibility;
+	-moz-transition-property: visibility;
+	-webkit-transition-property: visibility;
+
+	transition-delay: .5s;
+	-o-transition-delay: .5s;
+	-moz-transition-delay: .5s;
+	-webkit-transition-delay: .5s;
+}
+
+.tooltip_arrow_rotate {
+	transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+}
+
+.tooltip_auto_size {
+	white-space: nowrap;
+	width: auto;
+	height: auto;
+}
+
+.tooltip_info:after {
+	cursor: help;
+	content: url("/images/info.png");
+}
+
+.tooltip_del:after {
+	cursor: pointer;
+	content: url("/images/del.png");
+}
